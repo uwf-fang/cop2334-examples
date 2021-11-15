@@ -9,3 +9,6 @@ main.o: main.cpp student-group.hpp
 
 student-group.o: student-group.cpp student-group.hpp
 	$(CXX) $(CXXFLAGS) -g -c -o $@ $<
+
+clean:
+	rm -rf main *.o
