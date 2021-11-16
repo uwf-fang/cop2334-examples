@@ -9,14 +9,19 @@ using std::string;
 
 class MenuItem {
 private:
+  static int lastId;
   int id;
   string name;
   double price;
-  int generateID();
+  // generate global id
+  int generateId();
 public:
   MenuItem();
   MenuItem(string name, double price);
-  string show();
+  string getName();
+  int getId();
+  double getPrice();
+  string toString();
 };
 
 #endif

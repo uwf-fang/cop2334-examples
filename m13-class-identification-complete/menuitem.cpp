@@ -1,23 +1,34 @@
+#include "menuitem.hpp"
+
+#include <iomanip>
 #include <iostream>
 #include <sstream>
-#include <iomanip>
-#include "menuitem.hpp"
 
 using namespace std;
 
+// initialize static instance variable
+int MenuItem::lastId = 0;
+
 MenuItem::MenuItem() {
-    name = "";
-    price = 0;
-    id = 0;
+  name = "";
+  price = 0;
+  id = 0;
 }
 MenuItem::MenuItem(string name, double price) {
-    this->name = name;
-    this->price = price;
-    id = generateID();
+  this->name = name;
+  this->price = price;
+  id = generateId();
 }
 
-string MenuItem::show() {
-    ostringstream oSS;
-    oSS <<"Name: " << name << " | " << "Price: " << fixed << setprecision(2);
-    return oSS.str();
+string MenuItem::toString() {
+  ostringstream oSS;
+  oSS << "Name: " << name << " | "
+      << "Price: " << fixed << setprecision(2);
+  return oSS.str();
 }
+
+int MenuItem::generateId() { return ++lastId; }
+
+string MenuItem::getName() { return name; }
+int MenuItem::getId() { return id; }
+double MenuItem::getPrice() { return price; }

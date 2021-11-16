@@ -14,7 +14,8 @@ private:
 public:
   Item();
   Item(int menuItemId, int quantity);
-  string show();
+  int getID();
+  int getQuantity();
 };
 
 #endif
