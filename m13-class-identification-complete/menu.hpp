@@ -14,6 +14,7 @@ private:
 public:
   void add(string name, double price);
   void remove(string name);
+  int findIDByName(string name);
   string show();
 };
 

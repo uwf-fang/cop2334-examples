@@ -3,7 +3,6 @@
 
 #include <string>
 #include <vector>
-#include "menu.hpp"
 
 using std::vector;
 using std::string;
@@ -14,7 +13,7 @@ private:
   int quantity;
 public:
   Item();
-  Item(string name, int quantity);
+  Item(int menuItemId, int quantity);
   string show();
 };
 

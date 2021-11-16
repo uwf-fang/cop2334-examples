@@ -20,14 +20,16 @@ private:
 
 public:
   Restaurant();
-  Restaurant(string name);
-  void setName(sting name);
+  Restaurant(string name, Menu menu);
+  void setName(string name);
   string getName();
   void setMenu(Menu menu);
   string showMenu();
-  void place(Order order);
-  void deliver(Order order);
-  void pay(Order order);
+  // place an order
+  // returns the order id
+  int place(Order order);
+  void deliver(int orderID);
+  void pay(int orderID);
 };
 
 #endif

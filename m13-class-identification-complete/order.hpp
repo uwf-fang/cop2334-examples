@@ -19,7 +19,7 @@ public:
   Order();
   void add(string name, int quantity);
   bool remove(string name, int quantity);
-  void ready();
+  void isReady();
   void deliver();
   void pay();
   string show();

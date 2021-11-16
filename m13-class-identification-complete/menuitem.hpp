@@ -12,6 +12,7 @@ private:
   int id;
   string name;
   double price;
+  int generateID();
 public:
   MenuItem();
   MenuItem(string name, double price);
