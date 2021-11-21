@@ -5,7 +5,6 @@ test: test.o item.o
 	g++ -o $@ $^
 	./test
 
-
 %.o: %.cpp
 	g++ -std=c++11 -Wall -g -c -o $@ $<
 
