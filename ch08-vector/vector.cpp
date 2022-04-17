@@ -3,7 +3,7 @@
 
 using namespace std;
 
-void testVec() {
+void testVecBasics() {
   // vector v1; invalid, vector is not a type, vector<int> is
 
   // initialization, constructor call
@@ -33,7 +33,7 @@ void testVec() {
 
 int main() {
 
-  testVec();
+  testVecBasics();
 
   return EXIT_SUCCESS;
 }
